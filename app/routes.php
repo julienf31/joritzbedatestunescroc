@@ -11,7 +11,31 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
+Route::get('/', function () {
+    return View::make('template.theme');
 });
+
+
+Route::get('/contacts', array('as' => 'contact.index', function () {
+    return View::make('contact.index');
+}));
+
+Route::get('/contacts/create', array('as' => 'contact.create', function () {
+    return View::make('contact.create');
+}));
+
+Route::post('/contacts/create', array('as' => 'contact.store', function () {
+    //store and redirect
+}));
+
+Route::get('/contacts/edit/{id}', array('as' => 'contact.edit', function () {
+    return View::make('contact.index');
+}));
+
+Route::post('/contacts/edit/{id}', array('as' => 'contact.update', function () {
+    //update and redirect
+}));
+
+Route::get('/contacts/delete/{id}', array('as' => 'contact.delete', function () {
+    //delete and redirect
+}));

@@ -27,7 +27,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark primary-color">
 
     <!-- Navbar brand -->
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Jorit's contacts</a>
 
     <!-- Collapse button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
@@ -37,28 +37,18 @@
 
     <!-- Collapsible content -->
     <div class="collapse navbar-collapse" id="basicExampleNav">
-
         <!-- Links -->
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item {{ Request::is( 'home') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('home') }}">Home
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {{ Request::is( 'contacts') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('contact.index') }}">Contacts</a>
             </li>
-
         </ul>
-        <!-- Links -->
-
-        <form class="form-inline">
-            <div class="md-form my-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            </div>
-        </form>
     </div>
-    <!-- Collapsible content -->
 
 </nav>
 <!--/.Navbar-->

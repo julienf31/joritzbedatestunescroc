@@ -21,14 +21,15 @@ Route::get('/contacts', array('as' => 'contact.index', function () {
     return View::make('contact.index', compact('contacts'));
 }));
 
+Route::get('/contacts/create', array('as' => 'contact.create', function () {
+    return View::make('contact.create');
+}));
+
 Route::get('/contacts/{id}', array('as' => 'contact.show', function ($id) {
     $contact = Contact::where('id',$id)->first();
     return View::make('contact.show', compact('contact'));
 }));
 
-Route::get('/contacts/create', array('as' => 'contact.create', function () {
-    return View::make('contact.create');
-}));
 
 Route::post('/contacts/create', array('as' => 'contact.store', function () {
     $data = array(

@@ -5,8 +5,8 @@
     <table id="example" class="table table-striped table-bordered" style="width:100%">
         <thead>
         <tr>
-            <th>Nom</th>
             <th>Prénom</th>
+            <th>Nom</th>
             <th>Adresse</th>
             <th>Mail</th>
             <th>Téléphone</th>

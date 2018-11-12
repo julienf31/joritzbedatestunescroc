@@ -62,7 +62,7 @@
 
 </nav>
 <!--/.Navbar-->
-<div class="container">
+<div class="container mt-5">
     @section('content')
     @show
 </div>

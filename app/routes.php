@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', array( 'as' => 'home', function () {
     return View::make('template.theme');
-});
+}));
 
 
 Route::get('/contacts', array('as' => 'contact.index', function () {

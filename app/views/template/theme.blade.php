@@ -37,26 +37,12 @@
         <!-- Links -->
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home
+                <a class="nav-link" href="{{ route('home') }}">Home
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-            </li>
-
-            <!-- Dropdown -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                   aria-expanded="false">Dropdown</a>
-                <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
+                <a class="nav-link" href="{{ route('contact.index') }}">Contacts</a>
             </li>
 
         </ul>
